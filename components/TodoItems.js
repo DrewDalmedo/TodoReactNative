@@ -1,11 +1,7 @@
 import React from 'react'
 import { FlatList, SafeAreaView, View, Text } from 'react-native'
 
-const Item = ({ text }) => ( 
-  <View>
-    <Text>{text}</Text>
-  </View>
-)
+import Item from './Item'
 
 const TodoItems = ({ todos }) => {
   // render individual items through FlatList prop 'renderItem'
