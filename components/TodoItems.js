@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, SafeAreaView, View } from 'react-native'
+import { FlatList, SafeAreaView, View, Text } from 'react-native'
 
 
 const TEST_DATA = [
@@ -17,18 +17,26 @@ const TEST_DATA = [
   }
 ]
 
-const Item = props => {
+const Item = ({ title }) => ( 
   <View>
-    <Text>{props.title}</Text>
+    <Text>{title}</Text>
   </View>
-}
+)
 
 const TodoItems = () => {
-  const renderItem = props => {
-    <Item title={props.item.title} />
-  }
+  const renderItem = ({ item }) => (
+    <Item title={item.title} />
+  )
 
-  
+  return (
+    <SafeAreaView>
+      <FlatList
+        data={TEST_DATA}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+      />
+    </SafeAreaView>
+  )
 
 }
 
