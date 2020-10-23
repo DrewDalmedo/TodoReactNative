@@ -1,4 +1,5 @@
 import React from 'react'
+import { View } from 'react-native'
 
 
 const TEST_DATA = [
@@ -15,6 +16,12 @@ const TEST_DATA = [
     title: 'Third test item'
   }
 ]
+
+const Item = props => {
+  <View>
+    <Text>{props.title}</Text>
+  </View>
+}
 
 const TodoItems = () => {
 
