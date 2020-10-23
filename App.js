@@ -1,7 +1,11 @@
 import React from 'react'
 
-const App = () => {
+import TodoItems from './components/TodoItems'
 
+const App = () => {
+  return (
+    <TodoItems />
+  )
 }
 
 export default App
