@@ -6,6 +6,7 @@ const EntryForm = ({ addTodo }) => {
 
   const onSubmit = (values, actions) => {
     addTodo(values["todo"])
+    actions.resetForm();
   }
 
   return (
