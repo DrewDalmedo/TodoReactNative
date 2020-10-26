@@ -2,9 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 
 const Item = ({ text }) => ( 
-  <View>
-    <Text>{text}</Text>
-  </View>
+  <Text>{text}</Text>
 )
 
 export default Item
