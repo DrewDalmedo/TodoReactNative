@@ -36,16 +36,24 @@ const App = () => {
     setTodos([
       ...todos,
       {
-        id: `${parseInt(todos[todos.length-1].id) + 1}`,
+        // if there's no todos, set the id to 0. otherwise increment the id by 1
+        id: todos[0] === undefined ? '0' : `${parseInt(todos[todos.length-1].id) + 1}`,
         text: todo
       }
     ])
   }
 
+  const deleteTodo = (deletionId) => {
+    setTodos([
+      ...todos.filter( todo => todo.id !== deletionId)
+    ])
+    console.log(todos)
+  }
+
   return (
     <View>
       <EntryForm addTodo={addTodo} />
-      <TodoItems todos={todos} />
+      <TodoItems todos={todos} deleteTodo={deleteTodo} />
     </View>
   )
 }
