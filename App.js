@@ -47,7 +47,6 @@ const App = () => {
     setTodos([
       ...todos.filter( todo => todo.id !== deletionId)
     ])
-    console.log(todos)
   }
 
   return (

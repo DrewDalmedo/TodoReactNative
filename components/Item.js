@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 
 const Item = ({ text }) => ( 
   <Text>{text}</Text>

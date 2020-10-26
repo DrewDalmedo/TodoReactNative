@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, TextInput, Button } from 'react-native'
+import { SafeAreaView, TextInput, Button } from 'react-native'
 import { Formik } from 'formik'
 
 const EntryForm = ({ addTodo }) => {
@@ -28,30 +28,6 @@ const EntryForm = ({ addTodo }) => {
         </SafeAreaView>
       )}
     </Formik>
-
-    // old way
-    /*
-    <Formik
-      initialValues={{
-        todo: ''
-      }}
-      onSubmit={onSubmit}
-      render={formikProps => 
-        {
-          <>
-            <TextInput
-              value={formikProps.values.todo}
-              onChangeText={formikProps.handleChange('name')}
-            />
-            <Button 
-              title="Submit"
-              onPress={() => formikProps.handleSubmit()}
-            />
-          </>
-        }
-      }
-    />
-    */
 
   );
 }
