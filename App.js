@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
+import { View } from 'react-native'
 
 import TodoItems from './components/TodoItems'
+import EntryForm from './components/EntryForm'
 
 const App = () => {
   // todo object format:
@@ -12,6 +14,7 @@ const App = () => {
     }
   */
   // function state using hooks
+  // list of objects
   const [todos, setTodos] = useState( 
     [
       {
@@ -27,10 +30,13 @@ const App = () => {
         text: "third test item"
       }
     ] 
-  ) // list of objects
+  )
 
   return (
-    <TodoItems todos={todos}/>
+    <View>
+      <EntryForm />
+      <TodoItems todos={todos}/>
+    </View>
   )
 }
 
