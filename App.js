@@ -32,10 +32,20 @@ const App = () => {
     ] 
   )
 
+  const addTodo = (todo) => {
+    setTodos([
+      ...todos,
+      {
+        id: `${parseInt(todos[todos.length-1].id) + 1}`,
+        text: todo
+      }
+    ])
+  }
+
   return (
     <View>
-      <EntryForm />
-      <TodoItems todos={todos}/>
+      <EntryForm addTodo={addTodo} />
+      <TodoItems todos={todos} />
     </View>
   )
 }
