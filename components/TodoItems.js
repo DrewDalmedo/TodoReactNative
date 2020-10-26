@@ -14,7 +14,7 @@ const TodoItems = ({ todos }) => {
       <FlatList
         data={todos}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        //keyExtractor={item => item.id}
       />
     </SafeAreaView>
   )
