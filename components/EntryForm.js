@@ -2,11 +2,10 @@ import React from 'react';
 import { View, SafeAreaView, TextInput, Button } from 'react-native'
 import { Formik } from 'formik'
 
-const EntryForm = ({ setTodos }) => {
+const EntryForm = ({ addTodo }) => {
 
   const onSubmit = (values, actions) => {
-    // temporary 
-    console.log(values)
+    addTodo(values["todo"])
   }
 
   return (
