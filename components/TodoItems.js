@@ -1,5 +1,7 @@
 import React from 'react'
-import { FlatList, SafeAreaView, Pressable } from 'react-native'
+import { FlatList, Pressable } from 'react-native'
+
+import ConditionalView from './ConditionalView'
 
 import Item from './Item'
 
@@ -13,15 +15,15 @@ const TodoItems = ({ todos, deleteTodo }) => {
   )
 
   return (
-    <SafeAreaView>
+    <ConditionalView>
       <FlatList
         data={todos}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
-    </SafeAreaView>
+    </ConditionalView>
   )
 
 }
 
-export default TodoItems
+export default TodoItems;
