@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { View } from 'react-native'
+
+import ConditionalView from './components/ConditionalView'
 
 import TodoItems from './components/TodoItems'
 import EntryForm from './components/EntryForm'
@@ -50,10 +51,10 @@ const App = () => {
   }
 
   return (
-    <View>
+    <ConditionalView>
       <EntryForm addTodo={addTodo} />
       <TodoItems todos={todos} deleteTodo={deleteTodo} />
-    </View>
+    </ConditionalView>
   )
 }
 

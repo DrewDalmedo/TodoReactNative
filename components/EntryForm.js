@@ -1,5 +1,7 @@
 import React from 'react';
-import { SafeAreaView, TextInput, Button } from 'react-native';
+import { TextInput, Button } from 'react-native';
+
+import ConditionalView from './ConditionalView'
 import { Formik } from 'formik';
 
 const EntryForm = ({ addTodo }) => {
@@ -26,7 +28,7 @@ const EntryForm = ({ addTodo }) => {
       validate={validate}
     >
       {({ handleChange, handleBlur, handleSubmit, values }) => (
-        <SafeAreaView>
+        <ConditionalView>
           <TextInput 
             onChangeText={handleChange('todo')}
             onBlur={handleBlur('todo')}
@@ -36,7 +38,7 @@ const EntryForm = ({ addTodo }) => {
             onPress={handleSubmit}
             title="Submit"
           />
-        </SafeAreaView>
+        </ConditionalView>
       )}
     </Formik>
 
